@@ -1,0 +1,26 @@
+
+
+body {
+	min-height: 100vh;
+	color: #ebff00;
+	background: #452F37;
+	text-align: center;
+	font-family: helvetica;
+}
+
+.title {
+	text-align: left;
+}
+
+.centre-wrapper {
+	margin: auto;
+	width: 1300px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+canvas {
+	background: #fff;
+	margin: auto;
+}
