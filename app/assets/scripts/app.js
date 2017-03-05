@@ -4,9 +4,14 @@ var oldMidPt;
 let mouseMoveFn;
 let bgColour = '#FCFFF5';
 let brushColour = '#004358';
-let brushSize = 12;
+let brushSizeSlider = document.getElementById('brush-size-slider');
+let brushSize = brushSizeSlider.value;
 let brushStyle = 'round';
 const exportBtn = document.getElementById('export-button');
+const brushSizeBtn = document.getElementById('btn--brush-size');
+const brushSizeSubMenu = document.getElementById('brush-size-sub-menu');
+const brushColourBtn = document.getElementById('btn--brush-colour');
+const brushColourSubMenu = document.getElementById('brush-colour-sub-menu');
 
 function init() {
 const canvas = document.getElementById('stage');
@@ -51,8 +56,8 @@ createjs.Touch.enable(stage);
 stage.on('stagemousedown', mouseDownCallback);
 stage.on('stagemouseup', mouseUpCallback);
 
-canvas.width = window.innerWidth - 200;
-canvas.height = window.innerHeight - 200;
+canvas.width = window.innerWidth - 80;
+canvas.height = window.innerHeight - 100;
 
 
 
@@ -70,7 +75,22 @@ for (let i = document.getElementsByClassName('brush-colour').length - 1; i >= 0;
 const exportToPng = function () {
 
 }
-exportBtn.addEventListener('click', exportToPng);
+
+var updateBrushSize = function (){
+	brushSize = brushSizeSlider.value;
+	console.log(brushSize);
+}
+
+const slideDown = function (e) {
+	console.log(e.target)
+	if (e.target == brushSizeBtn){
+ brushSizeSubMenu.classList.toggle('visible');
+}
+}
+
+exportBtn.addEventListener('click', exportToPng, false);
+brushSizeSlider.addEventListener('change', updateBrushSize, false);
+document.querySelector('.btn--menu').addEventListener('click', slideDown, false);
 };
 
 init();

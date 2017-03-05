@@ -3,6 +3,7 @@
 <head>
 
 <meta name=viewport content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
         <!-- build:css assets/styles/styles.css -->
     <link rel="stylesheet" href="/temp/assets/styles/styles.css">
     <!-- endBuild -->
@@ -15,8 +16,9 @@
  <header class="header-bar">
   <h1 class="title">Painting Tool.</h1>
   <nav>
-    <div class="nav-item">Brush Colour
-      <ul class="sub-menu">
+    <div class="nav-item">
+    <div id="btn--brush-colour" class="btn--menu">Brush Colour</div>
+      <ul id="brush-colour-sub-menu" class="sub-menu">
         <li><a href="javascript:void(0);" class="brush-colour">#FD7400</a></li>
         <li><a href="javascript:void(0);" class="brush-colour">#FFE11A</a></li>
         <li><a href="javascript:void(0);" class="brush-colour">#BEDB39</a></li>
@@ -42,20 +44,17 @@
         <li><a href="javascript:void(0);" class="brush-colour"></a></li>
       </ul>
     </div>
-    <div class="nav-item">Brush Size
-      <ul class="sub-menu">
-        <li><a href="javascript:void(0);" class="brush-colour"></a></li>
-        <li><a href="javascript:void(0);" class="brush-colour"></a></li>
-        <li><a href="javascript:void(0);" class="brush-colour"></a></li>
-        <li><a href="javascript:void(0);" class="brush-colour"></a></li>
-        <li><a href="javascript:void(0);" class="brush-colour"></a></li>
+    <div class="nav-item">
+    <div id="btn--brush-size" class="btn--menu">Brush Size</div>
+      <ul id="brush-size-sub-menu" class="sub-menu">
+        <li><input id="brush-size-slider" class="brush-size__slider" type="range" min="1" max="100"></li>
       </ul>
     </div>
     <div class="nav-item" id="export-button">Export</div>
   </nav>
 </header>
  <main class="canvas-holder">
-    <canvas id="stage" height="800" width="1300"></canvas>
+    <canvas id="stage"></canvas>
   </main>
   </div>
 </body>
