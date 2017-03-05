@@ -3,11 +3,11 @@ let oldPt;
 var oldMidPt;
 let mouseMoveFn;
 let bgColour = '#FCFFF5';
-let brushColour = '#004358';
+let brushColour = '#000000';
 let brushSizeSlider = document.getElementById('brush-size-slider');
 let brushSize = brushSizeSlider.value;
 let brushStyle = 'round';
-const exportBtn = document.getElementById('export-button');
+const exportBtn = document.getElementById('export-to-image');
 const brushSizeBtn = document.getElementById('btn--brush-size');
 const brushSizeSubMenu = document.getElementById('brush-size-sub-menu');
 const brushColourBtn = document.getElementById('btn--brush-colour');
@@ -56,7 +56,7 @@ createjs.Touch.enable(stage);
 stage.on('stagemousedown', mouseDownCallback);
 stage.on('stagemouseup', mouseUpCallback);
 
-canvas.width = window.innerWidth - 80;
+canvas.width = window.innerWidth - 40;
 canvas.height = window.innerHeight - 100;
 
 
@@ -72,26 +72,34 @@ for (let i = document.getElementsByClassName('brush-colour').length - 1; i >= 0;
 
 
 
-const exportToPng = function () {
-
+const exportToPng = function  () {
+	
+	var dateTime = new Date();
+	//obj.href = canvas.toDataURL();
+	//obj.download = 'paint' + dateTime.getHours() + '-' +
+	dateTime.getMinutes() + '-' + dateTime.getSeconds();
 }
 
-var updateBrushSize = function (){
+const updateBrushSize = function (){
+
 	brushSize = brushSizeSlider.value;
 	console.log(brushSize);
 }
 
-const slideDown = function (e) {
-	console.log(e.target)
-	if (e.target == brushSizeBtn){
- brushSizeSubMenu.classList.toggle('visible');
-}
-}
 
-exportBtn.addEventListener('click', exportToPng, false);
+
+exportBtn.addEventListener('click', exportToPng(this), false);
 brushSizeSlider.addEventListener('change', updateBrushSize, false);
-document.querySelector('.btn--menu').addEventListener('click', slideDown, false);
+
 };
 
 init();
 
+$('.btn--menu').on('click', function(){
+ $(this).siblings('.sub-menu').toggleClass('visible');
+});
+
+      // bind event handler to clear button
+      document.getElementById('clear').addEventListener('click', () => {
+        stage.clear();
+      }, false);

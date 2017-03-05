@@ -3,7 +3,7 @@
 <head>
 
 <meta name=viewport content="width=device-width, initial-scale=1">
-<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Montserrat:500,900" rel="stylesheet">
         <!-- build:css assets/styles/styles.css -->
     <link rel="stylesheet" href="/temp/assets/styles/styles.css">
     <!-- endBuild -->
@@ -12,7 +12,6 @@
     <title>Painting Tool</title>
 </head>
 <body>
- <div class="centre-wrapper">
  <header class="header-bar">
   <h1 class="title">Painting Tool.</h1>
   <nav>
@@ -26,37 +25,39 @@
         <li><a href="javascript:void(0);" class="brush-colour">#004358</a></li>
       </ul>
     </div>
-    <div class="nav-item">Background Colour
+    <div class="nav-item">
+    <div id="btn--background-colour" class="btn--menu">Background Colour</div>
       <ul class="sub-menu">
-        <li><a href="javascript:void(0);" class="brush-colour"></a></li>
-        <li><a href="javascript:void(0);" class="brush-colour"></a></li>
-        <li><a href="javascript:void(0);" class="brush-colour"></a></li>
-        <li><a href="javascript:void(0);" class="brush-colour"></a></li>
-        <li><a href="javascript:void(0);" class="brush-colour"></a></li>
+        <li><a href="javascript:void(0);" class="background-colour"></a></li>
+        <li><a href="javascript:void(0);" class="background-colour"></a></li>
+    
       </ul>
     </div>
-    <div class="nav-item">Brush Style
+    <div class="nav-item">
+    <div id="btn--brush-style" class="btn--menu">Brush Style</div>
       <ul class="sub-menu">
         <li><a href="javascript:void(0);" class="brush-colour"></a></li>
         <li><a href="javascript:void(0);" class="brush-colour"></a></li>
-        <li><a href="javascript:void(0);" class="brush-colour"></a></li>
-        <li><a href="javascript:void(0);" class="brush-colour"></a></li>
-        <li><a href="javascript:void(0);" class="brush-colour"></a></li>
+
       </ul>
     </div>
     <div class="nav-item">
     <div id="btn--brush-size" class="btn--menu">Brush Size</div>
       <ul id="brush-size-sub-menu" class="sub-menu">
-        <li><input id="brush-size-slider" class="brush-size__slider" type="range" min="1" max="100"></li>
+        <li><input id="brush-size-slider" class="brush-size__slider" type="range" min="1" max="100" value="20"></li>
       </ul>
     </div>
-    <div class="nav-item" id="export-button">Export</div>
+
+    <div class="nav-item" >
+    <div id="btn--brush-size" class="btn--menu"><a href="javascript:void(0)" id="export-to-image">Export as PNG</a></div>
+      
+      </div>
+      <input type="button" id="clear" value="Clear">
   </nav>
 </header>
  <main class="canvas-holder">
     <canvas id="stage"></canvas>
   </main>
-  </div>
 </body>
 
 <script

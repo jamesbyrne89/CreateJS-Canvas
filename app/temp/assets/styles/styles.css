@@ -34,12 +34,12 @@ body {
 	background: #38003d;
 	text-align: center;
 	font-family: 'montserrat', helvetica;
+	font-smoothing: antialised;
 }
-
-28002c
 
 .title {
 	text-align: left;
+	font-weight: 900;
 }
 
 .centre-wrapper {
@@ -54,14 +54,13 @@ body {
 	-webkit-box-pack: center;
 	    -ms-flex-pack: center;
 	        justify-content: center;
-	width: calc(100vw - 90px);
+	
 }
 
 canvas {
 	background: #fff;
 	margin: auto;
-	min-width: 95vw;
-	box-shadow: 0px 0px 50px 5px rgba(0,0,0,0.4);
+	box-shadow: 0px 0px 50px 5px #28002c;
 	position: relative;
 }
 
@@ -75,8 +74,11 @@ canvas {
 	-webkit-box-align: center;
 	    -ms-flex-align: center;
 	        align-items: center;
-	width: 100%;
+	width: calc(100vw - 20px);
 	min-height: 80px;
+	margin: auto;
+	padding: 0 10px;
+	background: #38003d; 
 }
 
 nav {
@@ -85,56 +87,88 @@ nav {
 	display: flex;
 	-ms-flex-pack: distribute;
 	    justify-content: space-around;
-	background: #38003d;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 	position: relative;
 	z-index: 50;
-	
+	min-height: 80px;	
 }
 
 .nav-item {
-	font-weight: bold;
+	font-weight: normal;
 	margin: 0 20px;
-	background: #38003d;
 	position: relative;
 	z-index: 100;
-	
+	height:80px;
+	width: 160px;
+
 }
 
 .btn--menu {
 	position: relative;
+	font-weight: normal;
 	z-index: 20;
 	background: #38003d;
-	padding: 1em;
+	height: auto;
+	height: 80px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	text-align: center;
+	border-top: solid 8px #38003d;
 }
 
-.nav-item:hover {
+.btn--menu:hover {
+	margin: 0px;
 	cursor: pointer;
-	
-	
+	border-top: solid 8px #ebff00;
 }
 
 .sub-menu {
-	padding: 1em 0;
+	padding: 2em 1em;
 	list-style: none;
 	position: relative;
-	top: -100px;
+	top: -180px;
 	z-index: 6;
-	-webkit-transition: top 0.5s;
-	transition: top 0.5s;
+	-webkit-transition: top 0.3s ease-in-out;
+	transition: top 0.3s ease-in-out;
+	background: #38003d;
 }
 
 .visible {
 	top: 0px;
-	-webkit-transition: top 0.5s;
-	transition: top 0.5s;
+	-webkit-transition: top 0.3s ease-in-out;
+	transition: top 0.3s ease-in-out;
 	z-index: 5;
 }
+
+#clear {
+	background: #ebff00;
+	border: none;
+	padding: 0.25em 1em;
+	font-size: 1rem;
+	font-family: inherit;
+	height: 42px;
+	border-radius: 2px;
+	cursor: pointer;
+}
+
+/*********************
+       Slider
+*********************/
 
 .brush-size__slider::-webkit-slider-thumb {
   -webkit-appearance: none;
   border: 1px solid #ebff00;
   height:16px;
-  width: 8px;
+  width: 6px;
   margin-top: -7px;
   border-radius: 1px;
   background: #ebff00;
@@ -144,7 +178,7 @@ nav {
 
 input[type=range]::-moz-range-thumb {
   height: 16px;
-  width: 8px;
+  width: 6px;
    margin-top: -7px;
   border-radius: 1px;
   background: #ebff00;
@@ -153,7 +187,7 @@ input[type=range]::-moz-range-thumb {
 
 input[type=range]::-ms-thumb {
   height: 16px;
-  width: 8px;
+  width: 6px;
    margin-top: -7px;
   border-radius: 1px;
   background: #ebff00;
@@ -162,10 +196,9 @@ input[type=range]::-ms-thumb {
 
 input[type=range]::-webkit-slider-runnable-track {
   width: 100%;
-  height: 4px;
+  height: 2px;
   cursor: pointer;
   background: #ebff00;
-  border-radius: 1.3px;
 }
 
 input[type=range]:focus::-webkit-slider-runnable-track {
@@ -174,15 +207,14 @@ input[type=range]:focus::-webkit-slider-runnable-track {
 
 input[type=range]::-moz-range-track {
   width: 100%;
-  height: 4px;
+  height: 2px;
   cursor: pointer;
   background: #ebff00;
-  border-radius: 1.3px;
 }
 
 input[type=range]::-ms-track {
   width: 100%;
-  height: 4px;
+  height: 2px;
   cursor: pointer;
   background: transparent;
   border-color: transparent;
@@ -192,7 +224,6 @@ input[type=range]::-ms-track {
 
 input[type=range]::-ms-fill-lower {
   background: #ebff00;
-  border-radius: 2.6px;
 }
 
 input[type=range]:focus::-ms-fill-lower {
@@ -201,7 +232,6 @@ input[type=range]:focus::-ms-fill-lower {
 
 input[type=range]::-ms-fill-upper {
   background: #ebff00;
-  border-radius: 2.6px;
 }
 
 input[type=range]:focus::-ms-fill-upper {
