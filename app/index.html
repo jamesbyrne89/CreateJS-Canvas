@@ -13,10 +13,49 @@
 <body>
  <div class="centre-wrapper">
  <header class="header-bar">
-<h1 class="title">Painting Tool</h1>
+  <h1 class="title">Painting Tool.</h1>
+  <nav>
+    <div class="nav-item">Brush Colour
+      <ul class="sub-menu">
+        <li><a href="javascript:void(0);" class="brush-colour">#FD7400</a></li>
+        <li><a href="javascript:void(0);" class="brush-colour">#FFE11A</a></li>
+        <li><a href="javascript:void(0);" class="brush-colour">#BEDB39</a></li>
+        <li><a href="javascript:void(0);" class="brush-colour">#1F8A70</a></li>
+        <li><a href="javascript:void(0);" class="brush-colour">#004358</a></li>
+      </ul>
+    </div>
+    <div class="nav-item">Background Colour
+      <ul class="sub-menu">
+        <li><a href="javascript:void(0);" class="brush-colour"></a></li>
+        <li><a href="javascript:void(0);" class="brush-colour"></a></li>
+        <li><a href="javascript:void(0);" class="brush-colour"></a></li>
+        <li><a href="javascript:void(0);" class="brush-colour"></a></li>
+        <li><a href="javascript:void(0);" class="brush-colour"></a></li>
+      </ul>
+    </div>
+    <div class="nav-item">Brush Style
+      <ul class="sub-menu">
+        <li><a href="javascript:void(0);" class="brush-colour"></a></li>
+        <li><a href="javascript:void(0);" class="brush-colour"></a></li>
+        <li><a href="javascript:void(0);" class="brush-colour"></a></li>
+        <li><a href="javascript:void(0);" class="brush-colour"></a></li>
+        <li><a href="javascript:void(0);" class="brush-colour"></a></li>
+      </ul>
+    </div>
+    <div class="nav-item">Brush Size
+      <ul class="sub-menu">
+        <li><a href="javascript:void(0);" class="brush-colour"></a></li>
+        <li><a href="javascript:void(0);" class="brush-colour"></a></li>
+        <li><a href="javascript:void(0);" class="brush-colour"></a></li>
+        <li><a href="javascript:void(0);" class="brush-colour"></a></li>
+        <li><a href="javascript:void(0);" class="brush-colour"></a></li>
+      </ul>
+    </div>
+    <div class="nav-item">Export</div>
+  </nav>
 </header>
  <main class="canvas-holder">
-    <canvas height="800" width="1300"></canvas>
+    <canvas id="stage" height="800" width="1300"></canvas>
   </main>
   </div>
 </body>
@@ -25,6 +64,8 @@
   src="https://code.jquery.com/jquery-3.1.1.min.js"
   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
   crossorigin="anonymous"></script>
+  <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
   <!-- build:js assets/scripts/app.js -->
 <script src="assets/scripts/app.js"></script>
+
 <!-- endBuild -->

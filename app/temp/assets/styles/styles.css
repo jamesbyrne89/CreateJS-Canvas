@@ -14,7 +14,7 @@ body {
 
 .centre-wrapper {
 	margin: auto;
-	width: 1300px;
+	width: 95vw;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -30,4 +30,36 @@ body {
 canvas {
 	background: #fff;
 	margin: auto;
+	min-width: 95vw;
 }
+
+.header-bar {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	width: 100%;
+}
+
+nav {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-pack: distribute;
+	    justify-content: space-around;
+}
+
+.nav-item {
+	padding: 1em;
+}
+
+.sub-menu {
+	display: none;
+}
+
+.nav-item:hover.sub-menu {
+	display: block;
+}
+
