@@ -31,9 +31,9 @@ input[type=range]::-ms-track {
 body {
 	min-height: 100vh;
 	color: #ebff00;
-	background: #38003d;
+	background: #3c2e3d;
 	text-align: center;
-	font-family: 'montserrat', helvetica;
+	font-family: 'open sans', helvetica;
 	font-smoothing: antialised;
 }
 
@@ -41,6 +41,7 @@ body {
 .title {
 	text-align: left;
 	font-weight: 900;
+	font-family: 'permanent marker';
 }
 
 .centre-wrapper {
@@ -54,8 +55,10 @@ body {
 canvas {
 	background: #fff;
 	margin: auto;
-	box-shadow: 0px 0px 50px 5px #28002c;
+	box-shadow: 0px 0px 10px 5px #28002c;
 	position: relative;
+	z-index: 20;
+	cursor: url('../../../../assets/images/emoji.png'), auto;	
 }
 
 .header-bar {
@@ -66,7 +69,10 @@ canvas {
 	min-height: 80px;
 	margin: auto;
 	padding: 0 10px;
-	background: #38003d; 
+	background: #3c2e3d; 
+	position: relative;
+	z-index: 50;
+
 }
 
 
@@ -80,33 +86,41 @@ nav {
 }
 
 .nav-item {
-	font-weight: normal;
+	font-weight: bold;
 	margin: 0 20px;
+	padding: 0em 1em;
 	position: relative;
 	z-index: 100;
 	height:80px;
-	width: 160px;
-
+	width: 150px;
+	text-transform: uppercase;
+	font-size: 0.875rem;
+	background: #3c2e3d;
 }
 
 .btn--menu {
 	position: relative;
-	font-weight: normal;
+	font-weight: bold;
 	z-index: 20;
-	background: #38003d;
-	height: auto;
+	background: #3c2e3d;
 	height: 80px;
+	width: 120px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	text-align: center;
-	border-top: solid 8px #38003d;
+	border-top: solid 6px #3c2e3d;
+	transition: all 0.3s;
+	a {
+		color: #ebff00;
+		text-decoration: none;
+	}
 }
 
 .btn--menu:hover {
 	margin: 0px;
 	cursor: pointer;
-	border-top: solid 8px #ebff00;
+	border-top: solid 6px #ebff00;
 }
 
 
@@ -117,7 +131,7 @@ nav {
 	top: -180px;
 	z-index: 6;
 	transition: top 0.3s ease-in-out;
-	background: #38003d;
+	background: #3c2e3d;
 }
 
 .visible {
@@ -129,12 +143,15 @@ nav {
 #clear {
 	background: #ebff00;
 	border: none;
-	padding: 0.25em 1em;
-	font-size: 1rem;
+	padding: 0.25em 1.5em;
+	font-size: 0.875rem;
 	font-family: inherit;
 	height: 42px;
-	border-radius: 2px;
+	border-radius: 1.5px;
 	cursor: pointer;
+	font-weight: bold;
+	text-transform: uppercase;
+	transition: all 0.3s;
 }
 
 
